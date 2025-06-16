@@ -1,0 +1,33 @@
+<div class="relative w-full" *ngIf="banners.length > 0">
+    <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
+      <div *ngFor="let banner of banners; let i = index" 
+           class="absolute inset-0 transition-opacity duration-700 ease-in-out"
+           [class.opacity-100]="i === currentIndex"
+           [class.opacity-0]="i !== currentIndex">
+        <img [src]="banner" alt="Banner" class="w-full h-full object-cover" />
+      </div>
+  
+      <!-- Navigation Buttons -->
+      <button (click)="prev()" type="button"
+              class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 text-white font-bold text-2xl bg-black/30 hover:bg-black/50">
+        ‹
+      </button>
+      <button (click)="next()" type="button"
+              class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 text-white font-bold text-2xl bg-black/30 hover:bg-black/50">
+        ›
+      </button>
+  
+      <!-- Slide Indicators -->
+      <div class="absolute bottom-5 left-1/2 z-30 flex -translate-x-1/2 space-x-3">
+        <button *ngFor="let banner of banners; let i = index"
+                (click)="goToSlide(i)"
+                class="w-3 h-3 rounded-full"
+                [ngClass]="{
+                  'bg-white': i === currentIndex,
+                  'bg-gray-400': i !== currentIndex
+                }">
+        </button>
+      </div>
+    </div>
+  </div>
+  

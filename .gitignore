@@ -1,0 +1,68 @@
+# Angular build output
+**/dist
+**/.angular
+**/.angular-cache
+**/build
+
+# Node modules
+**/node_modules/
+
+# Logs
+**/npm-debug.log*
+**/yarn-debug.log*
+**/yarn-error.log*
+**/pnpm-debug.log*
+*.log
+
+
+# enviroment files
+**/.env
+
+# Package lock files 
+**/package-lock.json
+**/yarn.lock
+**/pnpm-lock.yaml
+
+# Compiled files
+*.js
+*.js.map
+*.tsbuildinfo
+
+# IDE files and OS files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.tmp
+*.swp
+
+#project specific ignores
+
+taskone/frontend/.angular/
+taskone/frontend/.angular/cache/
+taskone/frontend/dist/
+taskone/frontend/node_modules/
+
+taskone/backend/node_modules/
+taskone/backend/data/
+taskone/backend/uploads/
+
+
+tasktwp/client/.angular/
+tasktwo/client/.angular/cache/
+tasktwo/client/dist/
+
+taskthree/multilevel/.angular/
+taskthree/multilevel/.angular/cache/
+taskthree/multilevel/dist/
+taskthree/multilevel/*.log
+taskthree/multilevel/*.tmp
+
+
+

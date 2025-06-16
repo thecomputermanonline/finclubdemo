@@ -1,0 +1,41 @@
+<div class="max-w-2xl mx-auto p-6">
+  <h1 class="text-2xl font-bold mb-6 text-center">📤 Upload Page Data</h1>
+
+  <form (ngSubmit)="onSubmit()" #uploadForm="ngForm" class="space-y-6">
+
+    <!-- Page Description -->
+    <div>
+      <label class="block font-semibold mb-1">Page Description</label>
+      <input type="text" [(ngModel)]="description" name="description" required
+        class="w-full px-4 py-2 border rounded focus:outline-none focus:ring" />
+    </div>
+
+    <!-- Logo Upload -->
+    <div>
+      <label class="block font-semibold mb-1">Logo Image</label>
+      <input type="file" (change)="onLogoSelected($event)" accept="image/*" required
+        class="block w-full text-sm file:mr-4 file:py-2 file:px-4 file:rounded file:border-0 file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100" />
+    </div>
+
+    <!-- Banner Upload -->
+    <div>
+      <label class="block font-semibold mb-1">Banner Images (Multiple)</label>
+      <input type="file" multiple (change)="onBannersSelected($event)" accept="image/*" required
+        class="block w-full text-sm file:mr-4 file:py-2 file:px-4 file:rounded file:border-0 file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100" />
+    </div>
+
+    <!-- CSV Upload -->
+    <div>
+      <label class="block font-semibold mb-1">CSV File</label>
+      <input type="file" (change)="onCsvSelected($event)" accept=".csv" required
+        class="block w-full text-sm file:mr-4 file:py-2 file:px-4 file:rounded file:border-0 file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100" />
+    </div>
+
+    <!-- Submit Button -->
+    <div class="text-center">
+      <button type="submit" class="px-6 py-2 bg-blue-600 text-white rounded shadow hover:bg-blue-700 transition">
+        Upload Page
+      </button>
+    </div>
+  </form>
+</div>
