@@ -44,25 +44,23 @@ Thumbs.db
 
 #project specific ignores
 
-taskone/frontend/.angular/
-taskone/frontend/.angular/cache/
-taskone/frontend/dist/
-taskone/frontend/node_modules/
+#taskone/frontend/.angular/
+#taskone/frontend/.angular/cache/
+#taskone/frontend/dist/
+#taskone/frontend/node_modules/
 
-taskone/backend/node_modules/
-taskone/backend/data/
-taskone/backend/uploads/
+#taskone/backend/node_modules/
 
+#tasktwo/loancalc/.angular/
+#tasktwo/loancalc/.angular/cache/
+#tasktwo/loancalc/dist/
+#tasktwo/loancalc/node_modules/
 
-tasktwp/client/.angular/
-tasktwo/client/.angular/cache/
-tasktwo/client/dist/
+#taskthree/multilevel/.angular/
+#taskthree/multilevel/.angular/cache/
+#taskthree/multilevel/dist/
+#taskthree/multilevel/node_modules
 
-taskthree/multilevel/.angular/
-taskthree/multilevel/.angular/cache/
-taskthree/multilevel/dist/
-taskthree/multilevel/*.log
-taskthree/multilevel/*.tmp
 
 
 
