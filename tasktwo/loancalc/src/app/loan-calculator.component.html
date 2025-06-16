@@ -1,0 +1,40 @@
+<div class="max-w-xl mx-auto p-6 bg-white shadow rounded-md mt-10">
+    <h1 class="text-2xl font-bold text-center mb-6 text-blue-700">Loan Calculator</h1>
+
+    <form (ngSubmit)="calculateEMI()" class="space-y-4">
+        <div>
+            <label class="block font-medium mb-1">Loan Amount</label>
+            <input type="number" [(ngModel)]="loanAmount" name="loanAmount" required
+                class="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+        </div>
+
+        <div>
+            <label class="block font-medium mb-1">Interest Rate (%)</label>
+            <input type="number" [(ngModel)]="interestRate" name="interestRate" required
+                class="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+        </div>
+
+        <div>
+            <label class="block font-medium mb-1">Tenure (Months)</label>
+            <input type="number" [(ngModel)]="tenureMonths" name="tenureMonths" required
+                class="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+        </div>
+
+        <div>
+            <label class="block font-medium mb-1">Start Date (Optional)</label>
+            <input type="date" [(ngModel)]="startDate" name="startDate"
+                class="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+        </div>
+
+        <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700">
+            Calculate
+        </button>
+    </form>
+
+    <div *ngIf="emiResult" class="mt-6 bg-blue-50 p-4 rounded">
+        <h2 class="text-lg font-semibold text-blue-800 mb-2">Results</h2>
+        <p>💰 Monthly EMI: <strong>Rs {{ emiResult.monthlyEMI | number:'1.2-2' }}</strong></p>
+        <p>📈 Total Interest Payable: <strong>Rs {{ emiResult.totalInterest | number:'1.2-2' }}</strong></p>
+        <p>📊 Total Repayment: <strong>Rs {{ emiResult.totalPayment | number:'1.2-2' }}</strong></p>
+    </div>
+</div>
